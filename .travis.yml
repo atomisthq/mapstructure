@@ -1,7 +1,13 @@
-language: go 
-
-go: 
-  - 1.4
-  
+language: go
+go:
+- 1.4
 script:
-  - go test 
+- go test
+notifications:
+  email: false
+  webhooks:
+    on_success: always
+    on_failure: always
+    on_start: always
+    urls:
+    - https://webhook.atomist.com/travis
